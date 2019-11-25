@@ -2101,3 +2101,14 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/authors/4/posts" for 129.112.109.42 at 2019-11-25 19:22:54 +0000
+Cannot render console from 129.112.109.42! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[36mAuthor Load (1.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 45ms (Views: 24.2ms | ActiveRecord: 1.5ms)
+
+
